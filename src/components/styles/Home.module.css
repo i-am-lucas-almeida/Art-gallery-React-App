@@ -143,7 +143,7 @@ main{
 
 /******************************************************************/
 
-@media(max-width: 950px) {
+@media(max-width: 990px) {
 
     .subtitle{
         font-size: 4.5rem;
@@ -173,17 +173,22 @@ main{
 
 }
 
-@media(max-width: 870px){
+@media(max-width: 960px){
+
+    .header{
+        height: 120vh;
+    }
 
     .container_grid{
-        margin: 0 auto;
-        max-width: 100%;
-        width: 1440px;
         display: grid;
         justify-content: center;
         align-items: center;
         grid-template-columns: repeat(3, 1fr);
         grid-template-columns: 3;
+    }
+
+    .box_right{
+        margin-top: 100px;
     }
     
     .grid_image__1{
@@ -203,6 +208,7 @@ main{
     }
     
     .grid_image__2{
+        width: 100%;
         order: 3;
         grid-column: 1/4;
         grid-row: 3;
