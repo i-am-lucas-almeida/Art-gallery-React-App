@@ -1,0 +1,123 @@
+:root{
+    --Gold: #D5966C;
+    --Dark-Grey:#444;
+    --White:#fff;
+    --Black: #151515;
+    --font: 'Outfit', sans-serif;
+}
+
+.header_container{
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1440px;
+    margin-bottom: -5px;
+    overflow: hidden;
+}
+
+.header_btn{
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.location_container{
+    background-color: var(--Black);
+    color: var(--White);
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1440px;
+    padding: 8rem 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.location_container > aside > h2{
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.box_local{
+    max-width: 100%;
+    width: 470px;
+}
+
+.box_local > h3{
+    margin-bottom: 20px;
+    color: var(--Gold);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+.box_local > p{
+    font-size: 2rem;
+    line-height: 30px;
+}
+
+@media(max-width: 850px) {
+
+    .location_container{
+        justify-content: space-between;
+    }
+
+    .box_local{
+        max-width: 100%;
+        width: 400px;
+    }
+
+}
+
+@media(max-width: 730px) {
+
+    .header_container{
+        height: 400px;
+    }
+
+    .hero_desktop{
+        height: 100%;
+    }
+
+    .header_container{
+        margin-bottom: 0;
+    }
+
+    .location_container{
+        display: block;
+    }
+
+    .box_local{
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .location_container > aside{
+        display: flex;
+    }
+
+    .location_container > aside > h2{
+        margin-right: 20px;
+    }
+
+    .header_btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+@media(max-width: 450px) {
+
+    .location_container > aside > h2{
+        font-size: 4.5rem;
+    }
+
+    .box_local > h3{
+        font-size: 2.5rem;
+    }
+
+    .box_local > p{
+        font-size: 1.8rem;
+    }
+
+}

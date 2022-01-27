@@ -1,0 +1,274 @@
+:root{
+    --Gold: #D5966C;
+    --Dark-Grey:#444;
+    --White:#fff;
+    --Black: #151515;
+    --font: 'Outfit', sans-serif;
+}
+
+.title_mobile{
+    display: none;
+    margin-bottom: 20px;
+}
+
+.title_mobile > span{
+    color: var(--Gold);
+}
+
+.header{
+    margin-bottom: 50px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1440px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box_left{
+    padding-left: 5rem;
+    background-color: var(--Black);
+    height: 100%;
+    width: 35%;
+}
+
+.box_left > h1{
+    margin-top: 150px;
+    text-transform: uppercase;
+    font-size: 8rem;
+    color: var(--White);
+}
+
+.box_left > h1 > span{
+    color: var(--Gold);
+}
+
+.box_image{
+    height: 100%;
+    width: 35%;
+}
+
+.box_image > img{
+    width: 100%;
+    height: 100%;
+}
+
+.box_right{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+
+.box_right > div{
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    left: -80px;
+}
+
+.box_right > div > p{
+    color: var(--Dark-Grey);
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+/***************************************************************/
+
+main{
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1440px;
+    padding: 10rem 5rem;
+}
+
+.subtitle{
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.container_grid{
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1100px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 5;
+    grid-gap: 2rem;
+}
+
+.grid_image__1{
+    grid-column: 3/6;
+    grid-row: 1;
+}
+
+.grid_image__2{
+    grid-column: 1/4;
+    grid-row: 2/4;
+}
+
+.grid_image__3{
+    grid-column: 4/6;
+    grid-row: 2/3;
+}
+
+.box_txt__left{
+    grid-column: 1/3;
+    padding: 3rem;
+}
+
+.box_txt__left > p{
+    width: 300px;
+    font-size: 2rem;
+    color: var(--Dark-Grey);
+}
+
+.box_txt__right{
+    background-color: var(--Black);
+    color: var(--White);
+    grid-column: 4/6;
+    grid-row: 3/4;
+    padding: 3rem;
+}
+
+.box_txt__right > p{
+    font-size: 2rem;
+}
+
+/******************************************************************/
+
+@media(max-width: 950px) {
+
+    .subtitle{
+        font-size: 4.5rem;
+    }
+
+    .title_mobile{
+        display: block;
+        font-size: 6rem;
+        text-transform: uppercase;
+    }
+
+    .box_left{
+        display: none;
+    }
+
+    .box_image{
+        height: 100%;
+        width: 60%;
+    }
+
+    .box_right{
+        margin-top: 150px;
+        display: grid;
+        align-items: flex-start;
+        width: 40%;
+    }
+
+}
+
+@media(max-width: 870px){
+
+    .container_grid{
+        margin: 0 auto;
+        max-width: 100%;
+        width: 1440px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 3;
+    }
+    
+    .grid_image__1{
+        order: 1;
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+
+    .box_txt__left{
+        order: 2;
+        grid-column: 1/4;
+        grid-row: 2;
+    }
+
+    .box_txt__left > p{
+        width: 100%;
+    }
+    
+    .grid_image__2{
+        order: 3;
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+
+    .box_txt__right{
+        order: 4;
+        grid-column: 1/4;
+        grid-row: 4;
+    }
+    
+    .grid_image__3{
+        order: 5;
+        grid-column: 1/4;
+        grid-row: 5;
+    }
+
+}
+
+@media (max-width: 730px) {
+
+    main {
+        padding: 10rem 3rem;
+        padding-top: 15rem;
+    }
+
+    .header{
+        margin-bottom: 0px;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 1440px;
+        height: 100vh;
+        display: block;
+    }
+
+    .box_image{
+        height: 50%;
+        width: 100%;
+    }
+
+    .box_right{
+        margin-top: 0px;
+        padding: 30px 0;
+        display: grid;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .box_right > div{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        padding: 3rem;
+    }
+
+    .box_right > div > p{
+        margin-bottom: 30px;
+    }
+
+}
+
+@media(max-width: 450px) {
+
+    .box_txt__left, .box_txt__right{
+        padding: 3rem 2rem;
+    }
+
+}
