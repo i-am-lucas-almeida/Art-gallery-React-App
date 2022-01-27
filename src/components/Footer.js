@@ -9,7 +9,7 @@ function Footer({type, logo, icon}) {
 
         <section className={`${styles.footer_container} ${styles[type]}`}>
 
-            <Link to='/home'>
+            <Link to='/'>
 
                 <h3 className={styles.footer_logo}>
 

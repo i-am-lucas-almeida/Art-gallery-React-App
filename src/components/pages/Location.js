@@ -14,7 +14,7 @@ function Location() {
 
                 <div className={styles.header_btn}>
 
-                    <ButtonLocation to='/home' text='Back to Home' btn_left='show'/>
+                    <ButtonLocation to='/' text='Back to Home' btn_left='show'/>
 
                 </div>
 
