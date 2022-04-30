@@ -1,24 +1,40 @@
-import ButtonLocation from '../ButtonLocation';
-import Footer from '../Footer';
+import ButtonLocation from '../layout/ButtonLocation';
+import Footer from '../layout/Footer';
 import styles from '../styles/Location.module.css';
 
-import heroImageDesktop from '../../assets/desktop/image-map.png';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 function Location() {
 
-    return(
+    const latitude = '-23.5613';
+    const longitude = '-46.6560';
+
+    return (
 
         <>
+
+            <div className={styles.map} id='map'>
+
+                <MapContainer center={[latitude, longitude]} zoom={15} style={{width: '100%', height: '100%'}}>
+                    <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright"></a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Marker position={[latitude, longitude]}>
+                        <Popup>
+                            Av. Paulista, 1578 - Bela Vista, São Paulo - SP
+                        </Popup>
+                    </Marker>
+                </MapContainer>
+
+            </div>
 
             <header className={styles.header_container}>
 
                 <div className={styles.header_btn}>
 
-                    <ButtonLocation to='/' text='Back to Home' btn_left='show'/>
+                    <ButtonLocation to='/' text='Voltar para a home' btn_left='show' />
 
                 </div>
-
-                <img src={heroImageDesktop} alt='location illustration' className={styles.hero_desktop} />
 
             </header>
 
@@ -26,28 +42,27 @@ function Location() {
 
                 <aside>
 
-                    <h2>our </h2>
+                    <h2>Nossa <br /> Localização</h2>
 
-                    <h2>location</h2>
 
                 </aside>
 
                 <div className={styles.box_local}>
 
-                    <h3>99 KING STREET</h3>
+                    <h3>1578 AV. PAULISTA</h3>
 
-                    <p> Newport <br></br>
-                        RI 02840 <br></br>
-                        United States of America <br></br>
-                        <br></br>
-                        Our newly opened gallery is located near the Edward King House on 99 King Street, the Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm.
+                    <p> Bela Vista <br />
+                        01310-200 <br />
+                        São Paulo <br />
+                        <br />
+                        Nossa galeria está localizada no coração da Avenida Paulista. A Galeria de Belas Artes é gratuita para todos os visitantes e está aberta sete dias por semana, das 8h às 21h.
                     </p>
 
                 </div>
 
             </section>
 
-            <Footer type='footer_location' logo='logo_location' icon='icon_location'/>
+            <Footer type='footer_location' logo='logo_location' icon='icon_location' />
 
         </>
 

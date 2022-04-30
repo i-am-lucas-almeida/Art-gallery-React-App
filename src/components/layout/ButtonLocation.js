@@ -1,9 +1,9 @@
 import {Link} from 'react-router-dom';
 
-import styles from './styles/ButtonLocation.module.css';
+import styles from '../styles/ButtonLocation.module.css';
 
-import imageLeft from '../assets/icons/icon-arrow-left.svg';
-import imageRight from '../assets/icons/icon-arrow-right.svg';
+import imageLeft from '../../assets/icons/icon-arrow-left.svg';
+import imageRight from '../../assets/icons/icon-arrow-right.svg';
 
 function ButtonLocation({to, text, btn_left, btn_right}) {
 

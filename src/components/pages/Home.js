@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css';
 import heroImage from '../../assets/desktop/image-hero.jpg'; 
-import ButtonLocation from '../ButtonLocation';
-import Footer from '../Footer';
+import ButtonLocation from '../layout/ButtonLocation';
+import Footer from '../layout/Footer';
 
 import imageGrid_1 from '../../assets/desktop/image-grid-1.jpg';
 import imageGrid_2 from '../../assets/desktop/image-grid-2.jpg';
@@ -17,7 +17,7 @@ function Home() {
 
                 <div className={styles.box_left}>
 
-                    <h1><span>Modern</span> <br/> Art <br/> Gallery</h1>    
+                    <h1 className='animate__animated animate__fadeIn animate__delay-2s'>Galeria De <br/> Belas Artes</h1>    
                     
                 </div>
 
@@ -29,15 +29,15 @@ function Home() {
 
                 <div className={styles.box_right}>
 
-                    <div>
+                    <div className='animate__animated animate__fadeIn animate__delay-1s'>
 
-                        <h1 className={styles.title_mobile}><span>Modern</span> <br/> art Gallery</h1> 
+                        <h1 className={styles.title_mobile}>Galeria De <br/> Belas Artes</h1> 
 
                         <p>
-                            The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out 
+                            As artes da nova coleção de nossa galeria partiram de uma centelha de inspiração. Essas peças vão te inspirar? Visite-nos e descubra.
                         </p>
 
-                        <ButtonLocation to='/location' text='Our Location' btn_right='show' />
+                        <ButtonLocation to='/location' text='Nossa Localização' btn_right='show' />
 
                     </div>
 
@@ -51,26 +51,44 @@ function Home() {
 
                     <div className={styles.box_txt__left}>
 
-                        <h2 className={styles.subtitle}>your day at <br></br> the gallery</h2>
+                        <h2 className={styles.subtitle}>Passe o dia <br/> na galeria</h2>
 
                         <p className={styles.paragraph}>
-                            Wander through our distinct collections and find new insights about our artists. Dive into the details of their creative process.
+                            Passeie por nossas coleções distintas e encontre novos insights sobre nossos artistas. Mergulhe nos detalhes de seu processo criativo.
                         </p>
 
                     </div>
 
-                    <img src={imageGrid_1} alt='illustration gallery 1' className={styles.grid_image__1} />
+                    <div className={`${styles.image_container} ${styles.image_container__1}`}>
 
-                    <img src={imageGrid_2} alt='illustration gallery 2' className={styles.grid_image__2} />
+                        <img src={imageGrid_1} alt='illustration gallery 1' />
 
-                    <img src={imageGrid_3} alt='illustration gallery 3' className={styles.grid_image__3} />
+                        <small className="animate__animated animate__slideInUp">Helô Alcantara Machado, coleção "L'arte tribale"</small>
+
+                    </div>
+
+                    <div className={`${styles.image_container} ${styles.image_container__2}`}>
+
+                        <img src={imageGrid_2} alt='illustration gallery 2' />
+
+                        <small className="animate__animated animate__slideInUp">Maria Sá Pena, "Rotas do Tempo"</small>
+
+                    </div>
+
+                    <div className={`${styles.image_container} ${styles.image_container__3}`}>
+
+                        <img src={imageGrid_3} alt='illustration gallery 3' />
+
+                        <small className="animate__animated animate__slideInUp">Exposição "Obras de José Matuzzo"</small>
+
+                    </div>
 
                     <div className={styles.box_txt__right}>
 
-                        <h2 className={styles.subtitle}>come &#38; be <br></br> inspired</h2>
+                        <h2 className={styles.subtitle}>Venha &#38; <br/> inspire-se</h2>
 
                         <p className={styles.paragraph}>
-                            We’re excited to welcome you to our gallery and see how our collections influence you.
+                            Estamos ansiosos para recebê-los em nossa galeria e ver como nossas coleções os influenciam.
                         </p>
 
                     </div>
@@ -79,7 +97,7 @@ function Home() {
 
             </main>
 
-            <Footer type='footer_home' logo='logo_home' icon='icon_home'/>
+            <Footer type='footer_home' icon='icon_home'/>
 
         </>
 

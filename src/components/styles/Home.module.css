@@ -11,42 +11,40 @@
     margin-bottom: 20px;
 }
 
-.title_mobile > span{
-    color: var(--Gold);
-}
-
 .header{
     margin-bottom: 50px;
     margin: 0 auto;
     max-width: 100%;
     width: 1440px;
-    height: 100vh;
+    height: 130vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .box_left{
-    padding-left: 5rem;
     background-color: var(--Black);
     height: 100%;
     width: 35%;
+    position: relative;
 }
 
 .box_left > h1{
-    margin-top: 150px;
     text-transform: uppercase;
-    font-size: 8rem;
-    color: var(--White);
-}
-
-.box_left > h1 > span{
-    color: var(--Gold);
+    font-size: 10rem;
+	background: linear-gradient(to left, var(--Black) 39%, var(--White) 0);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+    position: absolute;
+    right: -182.8px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .box_image{
     height: 100%;
-    width: 35%;
+    width: 40%;
 }
 
 .box_image > img{
@@ -58,7 +56,7 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 25%;
     height: 100%;
     position: relative;
 }
@@ -72,8 +70,9 @@
 
 .box_right > div > p{
     color: var(--Dark-Grey);
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 50px;
+    line-height: 35px;
 }
 
 /***************************************************************/
@@ -82,7 +81,7 @@ main{
     margin: 0 auto;
     max-width: 100%;
     width: 1440px;
-    padding: 10rem 5rem;
+    padding: 12rem 10rem;
 }
 
 .subtitle{
@@ -94,8 +93,7 @@ main{
 
 .container_grid{
     margin: 0 auto;
-    max-width: 100%;
-    width: 1100px;
+    width: 100%;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(5, 1fr);
@@ -103,47 +101,97 @@ main{
     grid-gap: 2rem;
 }
 
-.grid_image__1{
+.image_container{
+    position: relative;
+    overflow: hidden;
+}
+
+.image_container > img{
+    width: 100%;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.image_container:hover small{
+    display: block;
+}
+
+.image_container:hover img{
+    opacity: .7;
+    transform: scale(1.2);
+}
+
+.image_container > small{
+    width: 100%;
+    display: none;
+    background-color: var(--Black);
+    color: var(--White);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.image_container__1{
     grid-column: 3/6;
     grid-row: 1;
 }
 
-.grid_image__2{
+.image_container__2{
     grid-column: 1/4;
     grid-row: 2/4;
 }
 
-.grid_image__3{
+.image_container__3{
     grid-column: 4/6;
     grid-row: 2/3;
+    object-fit: cover;
 }
 
 .box_txt__left{
     grid-column: 1/3;
-    padding: 3rem;
+    padding: 5rem 0;
+    padding-right: 3rem;
 }
 
 .box_txt__left > p{
-    width: 300px;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    line-height: 30px;
     color: var(--Dark-Grey);
 }
 
 .box_txt__right{
     background-color: var(--Black);
+    height: 100%;
     color: var(--White);
     grid-column: 4/6;
     grid-row: 3/4;
-    padding: 3rem;
+    padding: 5rem 3rem;
 }
 
 .box_txt__right > p{
-    font-size: 2rem;
+    font-size: 2.2rem;
+    line-height: 30px;
 }
 
 /******************************************************************/
 
-@media(max-width: 990px) {
+@media(max-width: 1100px) {
+
+    main{
+        margin: 0 auto;
+        max-width: 100%;
+        width: 1440px;
+        padding: 12rem 5rem;
+    }
+
+    .header{
+        margin-bottom: 50px;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 1440px;
+        height: 130vh;
+    }
 
     .subtitle{
         font-size: 4.5rem;
@@ -151,7 +199,7 @@ main{
 
     .title_mobile{
         display: block;
-        font-size: 6rem;
+        font-size: 7rem;
         text-transform: uppercase;
     }
 
@@ -165,19 +213,24 @@ main{
     }
 
     .box_right{
-        margin-top: 150px;
-        display: grid;
-        align-items: flex-start;
         width: 40%;
+        height: 100%;
+        position: relative;
+    }
+
+    .box_right > div{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .box_right > div > p{
+        font-size: 2rem;
     }
 
 }
 
 @media(max-width: 960px){
-
-    .header{
-        height: 120vh;
-    }
 
     .container_grid{
         display: grid;
@@ -185,16 +238,6 @@ main{
         align-items: center;
         grid-template-columns: repeat(3, 1fr);
         grid-template-columns: 3;
-    }
-
-    .box_right{
-        margin-top: 100px;
-    }
-    
-    .grid_image__1{
-        order: 1;
-        grid-column: 1/4;
-        grid-row: 1;
     }
 
     .box_txt__left{
@@ -206,12 +249,24 @@ main{
     .box_txt__left > p{
         width: 100%;
     }
+
+    .image_container__1{
+        order: 1;
+        grid-column: 1/4;
+        grid-row: 1;
+    }
     
-    .grid_image__2{
+    .image_container__2{
         width: 100%;
         order: 3;
         grid-column: 1/4;
         grid-row: 3;
+    }
+
+    .image_container__3{
+        order: 5;
+        grid-column: 1/4;
+        grid-row: 5;
     }
 
     .box_txt__right{
@@ -219,19 +274,27 @@ main{
         grid-column: 1/4;
         grid-row: 4;
     }
-    
-    .grid_image__3{
-        order: 5;
-        grid-column: 1/4;
-        grid-row: 5;
+
+    .box_right > div > p{
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+    }
+
+    .box_txt__left{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .box_txt__right > p, .box_txt__left > p{
+        font-size: 1.8rem;
     }
 
 }
 
-@media (max-width: 730px) {
+@media (max-width: 750px) {
 
     main {
-        padding: 10rem 3rem;
+        padding: 10rem 2rem;
         padding-top: 15rem;
     }
 
@@ -241,6 +304,7 @@ main{
         max-width: 100%;
         width: 1440px;
         height: 100vh;
+        margin-bottom: 30px;
         display: block;
     }
 
@@ -250,23 +314,18 @@ main{
     }
 
     .box_right{
-        margin-top: 0px;
         padding: 30px 0;
         display: grid;
         align-items: flex-start;
         width: 100%;
+        height: 50%;
     }
 
     .box_right > div{
         width: 100%;
         height: 100%;
-        position: absolute;
         left: 0;
-        padding: 3rem;
-    }
-
-    .box_right > div > p{
-        margin-bottom: 30px;
+        padding: 3rem 2rem;
     }
 
 }

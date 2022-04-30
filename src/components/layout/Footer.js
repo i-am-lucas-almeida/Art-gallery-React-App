@@ -1,19 +1,19 @@
 import {Link} from 'react-router-dom';
 import { FaFacebookSquare, FaInstagram, FaTwitter } from "react-icons/fa";
 
-import styles from './styles/Footer.module.css';
+import styles from '../styles/Footer.module.css';
 
-function Footer({type, logo, icon}) {
+function Footer({type, icon}) {
 
     return(
 
         <section className={`${styles.footer_container} ${styles[type]}`}>
 
-            <Link to='/'>
+            <Link to='/' className={styles.logo}>
 
                 <h3 className={styles.footer_logo}>
 
-                    <span className={styles[logo]}>modern</span> <br></br> art gallery
+                    galeria de <br/> belas artes
 
                 </h3>
 
@@ -21,7 +21,7 @@ function Footer({type, logo, icon}) {
 
             <div className={styles.footer_paragraph}>
 
-                <p>The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.</p>
+                <p>A Galeria de Belas Artes é gratuita para todos os visitantes e está aberta sete dias por semana, das 8h às 21h. Encontre-nos na 1578 da Bela Vista, Av.Paulista, SP.</p>
 
             </div>
 

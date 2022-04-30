@@ -6,18 +6,26 @@
     --font: 'Outfit', sans-serif;
 }
 
+.map{
+    width: 100%;
+    height: 90vh;
+}
+
 .header_container{
     margin: 0 auto;
     max-width: 100%;
     width: 1440px;
-    margin-bottom: -5px;
     overflow: hidden;
+}
+
+.hero_desktop{
+    height: 100%;
 }
 
 .header_btn{
     position: absolute;
     top: 0;
-    left: 30px;
+    left: 0px;
 }
 
 .location_container{
@@ -32,14 +40,17 @@
     justify-content: space-around;
 }
 
+.location_container > aside{
+    width: 40%;
+}
+
 .location_container > aside > h2{
     font-size: 6rem;
     text-transform: uppercase;
 }
 
 .box_local{
-    max-width: 100%;
-    width: 470px;
+    width: 50%;
 }
 
 .box_local > h3{
@@ -57,12 +68,22 @@
 @media(max-width: 850px) {
 
     .location_container{
-        justify-content: space-between;
+        padding: 8rem 2rem;
+        display: block;
     }
 
+    .location_container > aside{
+        width: 100%;
+    }
+    
     .box_local{
-        max-width: 100%;
-        width: 400px;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .map{
+        width: 100%;
+        height: 70vh;
     }
 
 }
@@ -70,19 +91,7 @@
 @media(max-width: 730px) {
 
     .header_container{
-        height: 400px;
-    }
-
-    .hero_desktop{
-        height: 100%;
-    }
-
-    .header_container{
         margin-bottom: 0;
-    }
-
-    .location_container{
-        display: block;
     }
 
     .box_local{
