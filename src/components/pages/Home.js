@@ -37,7 +37,7 @@ function Home() {
                             As artes da nova coleção de nossa galeria partiram de uma centelha de inspiração. Essas peças vão te inspirar? Visite-nos e descubra.
                         </p>
 
-                        <ButtonLocation to='/location' text='Nossa Localização' btn_right='show' />
+                        <ButtonLocation to='/local' text='Nossa Localização' btn_right='show' />
 
                     </div>
 
